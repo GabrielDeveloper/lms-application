@@ -1,0 +1,28 @@
+<h1>Artigos</h1>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Titulo</th>
+                <th>Conteudo</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($this->view->artigos as $artigo): ?>
+
+                <tr>
+                    <td><?php echo $artigo['id']; ?></td>
+                    <td><?php echo $artigo['titulo']; ?></td>
+                    <td><?php echo $artigo['conteudo']; ?></td>
+                    <td><a href="/edit?edit=edit&id=<?php echo $artigo['id']?>">[EDITAR]</a></td>
+                    <td><a href="/edit?id=<?php echo $artigo['id']?>">[DELETAR]</a></td>
+                </tr>
+            <?php endforeach; ?>
+
+        </tbody>
+    </table>
+</div>

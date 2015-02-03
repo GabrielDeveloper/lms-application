@@ -1,0 +1,16 @@
+<h1>Editar</h1>
+<form role="form" method="POST" >
+    <?php foreach ($this->view->artigo as $artigo): ?>
+  <div class="form-group">
+    <label for="Titulo">Titulo</label>
+    <input type="text" name="titulo" class="form-control" id="Titulo" value="<?php echo $artigo['titulo'];?>">
+  </div>
+  <div class="form-group">
+    <label for="Conteudo">Conteudo</label>
+    <textarea id="Conteudo" name="conteudo" class="form-control" rows="3"><?php echo $artigo['conteudo'];?></textarea>
+  </div>
+    <input type="hidden" name="edit" value="edit" />
+    <?php endforeach;?>
+    <input type="submit" class="btn btn-primary" value="Enviar">
+  
+</form>
